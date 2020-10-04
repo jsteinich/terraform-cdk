@@ -1,0 +1,44 @@
+name: Java Publish Test
+on: push
+
+jobs:
+  build_artifact:
+    runs-on: ubuntu-latest
+    container:
+      image: hashicorp/jsii-terraform
+    env:
+      CHECKPOINT_DISABLE: "1"
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: installing dependencies
+        run: |
+          yarn install
+      - name: compile
+        run: |
+          tools/align-version.sh
+          yarn build
+      - name: create bundle
+        run: yarn package
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist
+          path: dist
+
+  publish_java:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Download dist
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: dist
+      - name: Publish package
+        run: cd dist/java && mvn deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
