@@ -40,6 +40,6 @@ jobs:
           name: dist
           path: dist
       - name: Publish package
-        run: cd dist/java && mvn deploy
+        run: cd "$(dirname "$(find dist/java/ -type f -name *.pom | head -1)")" && mvn deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
