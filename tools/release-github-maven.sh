@@ -250,7 +250,7 @@ HERE
 deploy_non_central() {
     release_output="${workdir}/release-output.txt"
     for pom in ${poms}; do
-        $mvn deploy -f ${pom} -DaltDeploymentRepository=${server_id}::default::${MAVEN_REPOSITORY_URL} | tee ${release_output}
+        $mvn --settings=${mvn_settings} deploy -f ${pom} -DaltDeploymentRepository=${server_id}::default::${MAVEN_REPOSITORY_URL} | tee ${release_output}
 
         # If release failed, check if this was caused because we are trying to publish
         # the same version again, which is not an error. The magic string "409 Conflict"
