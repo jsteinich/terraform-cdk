@@ -43,4 +43,7 @@ jobs:
       - name: Publish package
         run: yarn release-github-maven
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          MAVEN_USERNAME: ${{ secrets.GITHUB_ACTOR }}
+          MAVEN_SERVER_ID: github
+          MAVEN_REPOSITORY_URL: "https://maven.pkg.github.com/jsteinich/terraform-cdk"
