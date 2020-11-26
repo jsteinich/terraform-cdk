@@ -41,7 +41,7 @@ jobs:
           name: dist
           path: dist
       - name: Publish package
-        run: yarn release-github-maven
+        run: npx -p jsii-release jsii-release-maven
         env:
           MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
           MAVEN_USERNAME: ${{ github.actor }}
