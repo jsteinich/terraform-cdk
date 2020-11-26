@@ -266,7 +266,7 @@ HERE
 deploy_non_central() {
     release_output="${workdir}/release-output.txt"
     for pom in ${poms}; do
-        $mvn --settings=${mvn_settings} deploy-file                 \
+        $mvn --settings=${mvn_settings} deploy:deploy-file          \
             -Durl=${server_id}::default::${MAVEN_REPOSITORY_URL}    \
             -DrepositoryId=${server_id}                             \
             -Dfile=${pom/.pom/.jar}                                 \
