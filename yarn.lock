@@ -10021,9 +10021,9 @@ sprintf-js@~1.0.2:
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
 sscaff@^1.2.0:
-  version "1.2.131"
-  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.131.tgz#922600743f551246cce9ff6d068db4a381aa89d7"
-  integrity sha512-vKap+a2ByEBq0nMLdJV5dX24eSyvLXBYqT/UJTJuZ8M5orV8CrSiCOOYoI9Kh4FrssS+EBB4uBygTnaW4JhnbA==
+  version "1.2.147"
+  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.147.tgz#50063f6d886c6f06bc459214ef3fef628f223d79"
+  integrity sha512-bw8nC1ozYRFTZSzhpyQZW8BcQPF6ZVts5Q/Ka21a7SznbamEws6uqygfqfJVNQjMo8PJnJw/V1bUv4Rxn2bTRw==
 
 sshpk@^1.7.0:
   version "1.16.1"
