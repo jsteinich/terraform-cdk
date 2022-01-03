@@ -10112,9 +10112,9 @@ sprintf-js@~1.0.2:
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
 sscaff@^1.2.0:
-  version "1.2.145"
-  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.145.tgz#5ea0ab58e142dc5c1d912b7b7af37239e1da892d"
-  integrity sha512-FMFZvweqWr1TDDw1Blb++KWq/YTnRW7f2ULFM/I46cwC+71UZzr0dukX7BddVlmzIZU1S/8X5uq/xR+e4WW26w==
+  version "1.2.160"
+  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.160.tgz#d53a42e135a5276805ab1302200296ea7c0294af"
+  integrity sha512-uTZ5DCeC18PF4PByNEBPW0nQUD5HCaaEUmcebMFj2Xljl5JVRpJmJvEIfenE14OseiJsq+/xjo2ZQJr7vIdIxQ==
 
 sshpk@^1.7.0:
   version "1.16.1"
